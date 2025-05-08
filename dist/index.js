@@ -8,7 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// Task-1
 function formatString(input, toUpper) {
     if (toUpper === false) {
         return input.toLowerCase();
@@ -20,18 +19,9 @@ function formatString(input, toUpper) {
 function filterByRating(items) {
     return items.filter((item) => item.rating >= 4);
 }
-const books = [
-    { title: "Book A", rating: 4.5 },
-    { title: "Book B", rating: 3.2 },
-    { title: "Book C", rating: 5.0 },
-];
-// console.log(filterByRating(books));
-// Task-3
 function concatenateArrays(...arrays) {
     return arrays.reduce((acc, current) => [...acc, ...current], []);
 }
-// console.log(concatenateArrays([1, 2], [3, 4], [5]));
-// Task-4
 class Vehicle {
     constructor(make, year) {
         this.make = make;
@@ -50,9 +40,6 @@ class Car extends Vehicle {
         return `Model: ${this.model}`;
     }
 }
-const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getModel());
-// Task-5
 function processValue(value) {
     if (typeof value === "string") {
         return value.length;
@@ -61,20 +48,12 @@ function processValue(value) {
         return value * 2;
     }
 }
-// Function to get the product with the highest price
 function getMostExpensiveProduct(products) {
     if (products.length === 0) {
         return null;
     }
     return products.reduce((max, current) => current.price > max.price ? current : max);
 }
-const products = [
-    { name: "Pen", price: 10 },
-    { name: "Notebook", price: 25 },
-    { name: "Bag", price: 50 },
-];
-// console.log(getMostExpensiveProduct(products));
-// Task-7
 var Day;
 (function (Day) {
     Day[Day["Monday"] = 0] = "Monday";
@@ -94,8 +73,6 @@ function getDayType(day) {
             return "Weekday";
     }
 }
-// console.log(getDayType(Day.Sunday));
-// Task-8
 function squareAsync(n) {
     return __awaiter(this, void 0, void 0, function* () {
         if (n < 0) {
@@ -108,4 +85,3 @@ function squareAsync(n) {
         });
     });
 }
-squareAsync(4).then(console.log);
